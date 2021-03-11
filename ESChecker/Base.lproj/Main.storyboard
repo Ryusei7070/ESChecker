@@ -41,9 +41,9 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1321.7391304347827" y="-571.20535714285711"/>
+            <point key="canvasLocation" x="1383" y="-571"/>
         </scene>
-        <!--Item-->
+        <!--事前チェック-->
         <scene sceneID="yxy-gz-CfX">
             <objects>
                 <viewController id="wfV-1O-Bx7" sceneMemberID="viewController">
@@ -53,7 +53,7 @@
                         <viewLayoutGuide key="safeArea" id="P4G-hq-M7m"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="AYu-jb-GOC"/>
+                    <tabBarItem key="tabBarItem" title="事前チェック" image="person.crop.circle.badge.checkmark" catalog="system" id="AYu-jb-GOC"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="0CH-mZ-s9z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -69,7 +69,7 @@
                         <viewLayoutGuide key="safeArea" id="fiT-8n-ht1"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="Item" id="vlL-Uw-J89"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="pencil" catalog="system" id="vlL-Uw-J89"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kd7-4l-Ja9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -81,6 +81,7 @@
                 <tabBarController automaticallyAdjustsScrollViewInsets="NO" id="E30-eV-wi1" sceneMemberID="viewController">
                     <toolbarItems/>
                     <tabBar key="tabBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="VOx-ag-47T">
+                        <rect key="frame" x="0.0" y="0.0" width="1000" height="1000"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
@@ -94,11 +95,11 @@
             </objects>
             <point key="canvasLocation" x="-990" y="171"/>
         </scene>
-        <!--Item-->
+        <!--ES-->
         <scene sceneID="GVc-Qn-erT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Bo-gd-WXi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="paperplane.fill" catalog="system" id="8Tw-8j-g55"/>
+                    <tabBarItem key="tabBarItem" title="ES" image="paperplane.fill" catalog="system" id="8Tw-8j-g55"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IbK-eo-bsc">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -116,6 +117,8 @@
     </scenes>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="pencil" catalog="system" width="128" height="113"/>
+        <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="113"/>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
