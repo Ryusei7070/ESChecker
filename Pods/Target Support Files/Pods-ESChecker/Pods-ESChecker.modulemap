@@ -1,0 +1,6 @@
+framework module Pods_ESChecker {
+  umbrella header "Pods-ESChecker-umbrella.h"
+
+  export *
+  module * { export * }
+}
