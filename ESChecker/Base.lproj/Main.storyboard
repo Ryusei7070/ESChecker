@@ -11,7 +11,7 @@
         <!--ES一覧-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ESListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -36,42 +36,97 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
                     <navigationItem key="navigationItem" title="ES一覧" id="D6A-Oa-Jlq">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vic-yE-OWw"/>
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="Vic-yE-OWw">
+                            <connections>
+                                <segue destination="DJL-Bd-0hv" kind="show" identifier="toAddES" id="vUe-4l-vh7"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="ESTableView" destination="Zt5-fS-JEX" id="hQV-Uk-H5d"/>
+                        <segue destination="uHf-Jz-ML3" kind="show" identifier="toDetail" id="7lF-j5-5dL"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1382.608695652174" y="-571.20535714285711"/>
         </scene>
-        <!--View Controller-->
+        <!--Detail View Controller-->
         <scene sceneID="UI7-Iv-xao">
             <objects>
-                <viewController id="uHf-Jz-ML3" sceneMemberID="viewController">
+                <viewController id="uHf-Jz-ML3" customClass="DetailViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="jnU-Ad-iwy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="SNv-ZZ-ISz">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="sNZ-Lv-a7O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="Vlu-8y-pBx">
+                        <rightBarButtonItems>
+                            <barButtonItem systemItem="trash" id="Qrm-gO-uFs">
+                                <connections>
+                                    <action selector="delete" destination="uHf-Jz-ML3" id="EMB-p5-viL"/>
+                                </connections>
+                            </barButtonItem>
+                            <barButtonItem systemItem="refresh" id="zhb-oP-qZ2">
+                                <connections>
+                                    <action selector="update" destination="uHf-Jz-ML3" id="XND-FA-N0o"/>
+                                </connections>
+                            </barButtonItem>
+                        </rightBarButtonItems>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ESTextView" destination="SNv-ZZ-ISz" id="siG-wY-8OS"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-1c-Qpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2458" y="-467"/>
+            <point key="canvasLocation" x="2428.985507246377" y="-157.36607142857142"/>
         </scene>
-        <!--View Controller-->
+        <!--Add View Controller-->
         <scene sceneID="bav-Zv-Tmt">
             <objects>
-                <viewController id="DJL-Bd-0hv" sceneMemberID="viewController">
+                <viewController id="DJL-Bd-0hv" customClass="AddViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="ah7-2t-o5F">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="A0a-U2-4IR">
+                                <rect key="frame" x="0.0" y="88" width="414" height="725"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <color key="textColor" systemColor="labelColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="t8K-kg-7Zz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
+                    <navigationItem key="navigationItem" id="dqL-Hw-9U0">
+                        <barButtonItem key="rightBarButtonItem" title="保存" id="5fa-YR-fkM">
+                            <connections>
+                                <action selector="save" destination="DJL-Bd-0hv" id="3dF-EY-wam"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="ESTextView" destination="A0a-U2-4IR" id="yER-aT-7go"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="EgE-Bo-cyx" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2459" y="-1219"/>
+            <point key="canvasLocation" x="2457.971014492754" y="-1219.4196428571429"/>
         </scene>
         <!--事前チェック-->
         <scene sceneID="yxy-gz-CfX">
@@ -149,6 +204,9 @@
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
         <image name="pencil" catalog="system" width="128" height="113"/>
         <image name="person.crop.circle.badge.checkmark" catalog="system" width="128" height="113"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
