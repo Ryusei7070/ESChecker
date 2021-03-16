@@ -142,12 +142,54 @@
                     </tabBar>
                     <connections>
                         <segue destination="0Bo-gd-WXi" kind="relationship" relationship="viewControllers" id="bRl-lw-RgD"/>
-                        <segue destination="j9c-Jw-pee" kind="relationship" relationship="viewControllers" id="c6J-EL-Cfq"/>
+                        <segue destination="Ojl-rf-rLu" kind="relationship" relationship="viewControllers" id="pjo-Nj-szt"/>
                     </connections>
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9e-WH-h3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1793" y="325"/>
+        </scene>
+        <!--チェック項目-->
+        <scene sceneID="BzU-BG-jbs">
+            <objects>
+                <viewController id="pgN-Ns-UBM" customClass="CheckListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="L96-qe-8kw">
+                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="y6w-QO-SGd">
+                                <rect key="frame" x="0.0" y="88" width="428" height="838"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckCell" id="664-Hf-OxM">
+                                        <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="664-Hf-OxM" id="PAd-dI-Vgc">
+                                            <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="pgN-Ns-UBM" id="Ltq-C4-OxK"/>
+                                    <outlet property="delegate" destination="pgN-Ns-UBM" id="jqo-0u-yRT"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="pPi-vt-DpD"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="チェック項目" id="ttr-CK-r8I">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyF-qw-uPg"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="CheckTableView" destination="y6w-QO-SGd" id="SND-WQ-VDh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="63m-BR-lnk" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1310.7476635514017" y="631.74946004319656"/>
         </scene>
         <!--ES-->
         <scene sceneID="GVc-Qn-erT">
@@ -169,65 +211,29 @@
             </objects>
             <point key="canvasLocation" x="411" y="-450"/>
         </scene>
-        <!--チェック項目-->
-        <scene sceneID="ULp-bY-icS">
+        <!--Item-->
+        <scene sceneID="Gbq-1h-PIl">
             <objects>
-                <tableViewController id="pBS-hR-AiT" customClass="CheckListTableViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
-                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="o3t-jV-6r2">
-                        <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                        <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="CheckItemCell" id="SnQ-WX-dUI">
-                                <rect key="frame" x="0.0" y="28" width="428" height="43.666667938232422"/>
-                                <autoresizingMask key="autoresizingMask"/>
-                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="SnQ-WX-dUI" id="zG5-Lr-vKb">
-                                    <rect key="frame" x="0.0" y="0.0" width="428" height="43.666667938232422"/>
-                                    <autoresizingMask key="autoresizingMask"/>
-                                </tableViewCellContentView>
-                            </tableViewCell>
-                        </prototypes>
-                        <connections>
-                            <outlet property="dataSource" destination="pBS-hR-AiT" id="ozD-8B-5u8"/>
-                            <outlet property="delegate" destination="pBS-hR-AiT" id="unk-6W-Ddu"/>
-                        </connections>
-                    </tableView>
-                    <navigationItem key="navigationItem" title="チェック項目" id="cqj-3n-XKg">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="MOR-7V-vac">
-                            <connections>
-                                <action selector="addButtonPressed:" destination="pBS-hR-AiT" id="70l-zS-vb9"/>
-                            </connections>
-                        </barButtonItem>
-                    </navigationItem>
-                </tableViewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="9fP-Wd-6jg" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="1293.9252336448596" y="314.90280777537799"/>
-        </scene>
-        <!--事前チェック-->
-        <scene sceneID="WxT-PH-j9d">
-            <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="j9c-Jw-pee" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="事前チェック" image="person.crop.circle.badge.checkmark.fill" catalog="system" id="4ZI-E9-RTJ"/>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ojl-rf-rLu" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="6fM-Dh-0FY"/>
                     <toolbarItems/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="tDe-4h-HeN">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pj-UU-pvL">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <color key="barTintColor" red="0.63883919460000005" green="0.96767215520000005" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                     </navigationBar>
                     <nil name="viewControllers"/>
                     <connections>
-                        <segue destination="pBS-hR-AiT" kind="relationship" relationship="rootViewController" id="CeZ-EI-GtY"/>
+                        <segue destination="pgN-Ns-UBM" kind="relationship" relationship="rootViewController" id="dEO-rZ-Ee9"/>
                     </connections>
                 </navigationController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="lP8-hO-UxI" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8x8-4M-llf" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="393.92523364485982" y="314.90280777537799"/>
+            <point key="canvasLocation" x="410.74766355140184" y="631.74946004319656"/>
         </scene>
     </scenes>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
-        <image name="person.crop.circle.badge.checkmark.fill" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
