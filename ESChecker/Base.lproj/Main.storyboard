@@ -149,7 +149,7 @@
             </objects>
             <point key="canvasLocation" x="-1793" y="325"/>
         </scene>
-        <!--チェック項目-->
+        <!--面接（前日 直前 後）チェック項目-->
         <scene sceneID="BzU-BG-jbs">
             <objects>
                 <viewController id="pgN-Ns-UBM" customClass="CheckListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -180,8 +180,12 @@
                         <viewLayoutGuide key="safeArea" id="pPi-vt-DpD"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" title="チェック項目" id="ttr-CK-r8I">
-                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyF-qw-uPg"/>
+                    <navigationItem key="navigationItem" title="面接（前日 直前 後）チェック項目" id="ttr-CK-r8I">
+                        <barButtonItem key="rightBarButtonItem" systemItem="add" id="gyF-qw-uPg">
+                            <connections>
+                                <action selector="addBtnAction:" destination="pgN-Ns-UBM" id="0hs-pB-Afp"/>
+                            </connections>
+                        </barButtonItem>
                     </navigationItem>
                     <connections>
                         <outlet property="CheckTableView" destination="y6w-QO-SGd" id="SND-WQ-VDh"/>
@@ -211,11 +215,11 @@
             </objects>
             <point key="canvasLocation" x="411" y="-450"/>
         </scene>
-        <!--Item-->
+        <!--面接チェック-->
         <scene sceneID="Gbq-1h-PIl">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="Ojl-rf-rLu" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="6fM-Dh-0FY"/>
+                    <tabBarItem key="tabBarItem" title="面接チェック" image="person.crop.circle.fill.badge.checkmark" catalog="system" id="6fM-Dh-0FY"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3pj-UU-pvL">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -234,6 +238,7 @@
     </scenes>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="person.crop.circle.fill.badge.checkmark" catalog="system" width="128" height="113"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
