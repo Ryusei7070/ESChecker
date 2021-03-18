@@ -18,6 +18,8 @@ class TODOListViewController: UIViewController, UITableViewDelegate, UITableView
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        ToDoTableView.dataSource = self
+        ToDoTableView.delegate = self
         if let storedTodoList = userDefaults.array(forKey: "TODOList")as? [String] {
             TODOList.append(contentsOf: storedTodoList)
         
@@ -31,8 +33,8 @@ class TODOListViewController: UIViewController, UITableViewDelegate, UITableView
         let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (acrion: UIAlertAction) in
             if let textField = alertController.textFields?.first {
             self.TODOList.insert(textField.text!, at: 0)
-            self.tableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.right)
-                
+            self.ToDoTableView.insertRows(at: [IndexPath(row: 0, section: 0)], with: UITableView.RowAnimation.right)
+                print(self.TODOList)
             self.userDefaults.set(self.TODOList, forKey: "TODOList")
             }
 
@@ -47,7 +49,8 @@ class TODOListViewController: UIViewController, UITableViewDelegate, UITableView
 
 
    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-      return TODOList.count
+      print(TODOList.count)
+    return TODOList.count
 }
 
    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
