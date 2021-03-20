@@ -209,7 +209,7 @@
         <scene sceneID="J9b-Fe-7vq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Vn-MM-s6b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Dtp-3I-Hb8"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="person.crop.circle.badge.checkmark.fill" catalog="system" id="Dtp-3I-Hb8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Tk-fw-264">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -271,7 +271,7 @@
         <scene sceneID="BRy-TS-j7T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hso-Ct-9Lq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Zbi-UI-qLk"/>
+                    <tabBarItem key="tabBarItem" title="Item" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="Zbi-UI-qLk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w0j-7J-gGb">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -290,6 +290,8 @@
     </scenes>
     <resources>
         <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="person.crop.circle.badge.checkmark.fill" catalog="system" width="128" height="113"/>
+        <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <systemColor name="labelColor">
             <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
         </systemColor>
