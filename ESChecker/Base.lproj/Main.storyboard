@@ -225,7 +225,7 @@
             </objects>
             <point key="canvasLocation" x="411" y="382"/>
         </scene>
-        <!--List View Controller-->
+        <!--TODO-->
         <scene sceneID="XAX-MH-Dla">
             <objects>
                 <viewController id="8Cc-ua-xdo" customClass="TODOListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -252,7 +252,7 @@
                         <viewLayoutGuide key="safeArea" id="jFC-Ox-5Os"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="gCZ-nl-gKd">
+                    <navigationItem key="navigationItem" title="TODO" id="gCZ-nl-gKd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dhP-Vc-ZQQ">
                             <connections>
                                 <action selector="addBtnAction:" destination="8Cc-ua-xdo" id="4cD-iC-Jb4"/>
