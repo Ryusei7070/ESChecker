@@ -51,7 +51,7 @@
             </objects>
             <point key="canvasLocation" x="1321" y="-450"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--詳細-->
         <scene sceneID="UI7-Iv-xao">
             <objects>
                 <viewController id="uHf-Jz-ML3" customClass="DetailViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -71,7 +71,7 @@
                         <viewLayoutGuide key="safeArea" id="sNZ-Lv-a7O"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="Vlu-8y-pBx">
+                    <navigationItem key="navigationItem" title="詳細" id="Vlu-8y-pBx">
                         <rightBarButtonItems>
                             <barButtonItem systemItem="trash" id="Qrm-gO-uFs">
                                 <connections>
@@ -93,7 +93,7 @@
             </objects>
             <point key="canvasLocation" x="2832" y="-439"/>
         </scene>
-        <!--Add View Controller-->
+        <!--入力画面-->
         <scene sceneID="bav-Zv-Tmt">
             <objects>
                 <viewController id="DJL-Bd-0hv" customClass="AddViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -113,7 +113,7 @@
                         <viewLayoutGuide key="safeArea" id="t8K-kg-7Zz"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dqL-Hw-9U0">
+                    <navigationItem key="navigationItem" title="入力画面" id="dqL-Hw-9U0">
                         <barButtonItem key="rightBarButtonItem" title="保存" id="5fa-YR-fkM">
                             <connections>
                                 <action selector="save" destination="DJL-Bd-0hv" id="3dF-EY-wam"/>
