@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-1c-Qpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832" y="-450"/>
+            <point key="canvasLocation" x="2832" y="-439"/>
         </scene>
         <!--Add View Controller-->
         <scene sceneID="bav-Zv-Tmt">
@@ -148,7 +148,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="D9e-WH-h3q" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1793" y="325"/>
+            <point key="canvasLocation" x="-810" y="382"/>
         </scene>
         <!--チェック-->
         <scene sceneID="IK5-yN-FFc">
@@ -189,7 +189,7 @@
         <scene sceneID="GVc-Qn-erT">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="0Bo-gd-WXi" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="ES" image="paperplane.fill" catalog="system" id="8Tw-8j-g55"/>
+                    <tabBarItem key="tabBarItem" title="ES" image="doc.fill" catalog="system" id="8Tw-8j-g55"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="IbK-eo-bsc">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -289,7 +289,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="paperplane.fill" catalog="system" width="128" height="118"/>
+        <image name="doc.fill" catalog="system" width="115" height="128"/>
         <image name="person.crop.circle.badge.checkmark.fill" catalog="system" width="128" height="113"/>
         <image name="rectangle.and.pencil.and.ellipsis" catalog="system" width="128" height="81"/>
         <systemColor name="labelColor">
