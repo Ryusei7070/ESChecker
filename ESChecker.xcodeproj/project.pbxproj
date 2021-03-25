@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1B1A62AC2602274000A5AD9B /* CheckListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A62AB2602274000A5AD9B /* CheckListTableViewController.swift */; };
 		1B1A62B026022FB700A5AD9B /* TODOListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B1A62AF26022FB700A5AD9B /* TODOListViewController.swift */; };
+		1B510FFD260CD39800F40934 /* ios in Resources */ = {isa = PBXBuildFile; fileRef = 1B510FFC260CD39800F40934 /* ios */; };
 		1BCED1C825FA37DF005B1A4C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCED1C725FA37DF005B1A4C /* AppDelegate.swift */; };
 		1BCED1CA25FA37DF005B1A4C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BCED1C925FA37DF005B1A4C /* SceneDelegate.swift */; };
 		1BCED1CF25FA37DF005B1A4C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BCED1CD25FA37DF005B1A4C /* Main.storyboard */; };
@@ -23,6 +24,7 @@
 /* Begin PBXFileReference section */
 		1B1A62AB2602274000A5AD9B /* CheckListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckListTableViewController.swift; sourceTree = "<group>"; };
 		1B1A62AF26022FB700A5AD9B /* TODOListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TODOListViewController.swift; sourceTree = "<group>"; };
+		1B510FFC260CD39800F40934 /* ios */ = {isa = PBXFileReference; lastKnownFileType = folder; name = ios; path = ../../icon/ios; sourceTree = "<group>"; };
 		1BCED1C425FA37DF005B1A4C /* ESChecker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ESChecker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BCED1C725FA37DF005B1A4C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BCED1C925FA37DF005B1A4C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -88,6 +90,7 @@
 		1BCED1BB25FA37DF005B1A4C = {
 			isa = PBXGroup;
 			children = (
+				1B510FFC260CD39800F40934 /* ios */,
 				1BCED1C625FA37DF005B1A4C /* ESChecker */,
 				1BCED1C525FA37DF005B1A4C /* Products */,
 				199B5A484B5EE725A5A8684F /* Pods */,
@@ -188,6 +191,7 @@
 			files = (
 				1BCED1D425FA37E0005B1A4C /* LaunchScreen.storyboard in Resources */,
 				1BCED1D125FA37E0005B1A4C /* Assets.xcassets in Resources */,
+				1B510FFD260CD39800F40934 /* ios in Resources */,
 				1BCED1CF25FA37DF005B1A4C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
