@@ -91,7 +91,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-1c-Qpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832" y="-439"/>
+            <point key="canvasLocation" x="2832" y="-450"/>
         </scene>
         <!--入力画面-->
         <scene sceneID="bav-Zv-Tmt">
@@ -285,7 +285,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="G7c-ve-4fU" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="410.74766355140184" y="1217.4946004319656"/>
+            <point key="canvasLocation" x="411" y="1217"/>
         </scene>
     </scenes>
     <resources>

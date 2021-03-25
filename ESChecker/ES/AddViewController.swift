@@ -27,7 +27,7 @@ class AddViewController: UIViewController {
         object?.setObject(ESTextView.text, forKey: "es")
         object?.saveInBackground({ (error) in
             if error != nil {
-                print(error)
+                print(error!)
             } else {
                 let alertController = UIAlertController(title: "保存完了", message: "保存が完了しました。ES一覧に戻ります。", preferredStyle: .alert)
                 

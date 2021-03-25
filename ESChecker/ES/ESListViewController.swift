@@ -63,7 +63,7 @@ class ESListViewController: UIViewController, UITableViewDataSource, UITableView
         let query = NCMBQuery(className: "ES")
         query?.findObjectsInBackground({ (result, error) in
             if error != nil {
-                print(error)
+                print(error!)
             } else {
                 self.ESArray = result as! [NCMBObject]
                 self.ESTableView.reloadData()
