@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import NCMB
+
 
 class AddViewController: UIViewController {
     
@@ -23,22 +23,31 @@ class AddViewController: UIViewController {
     }
     
     @IBAction func save() {
-        let object = NCMBObject(className: "ES")
-        object?.setObject(ESTextView.text, forKey: "es")
-        object?.saveInBackground({ (error) in
-            if error != nil {
-                print(error!)
+        let inputText = ESTextView.text
+        let ud = UserDefaults.standard
+        if ud.array(forKey: "ESArray") != nil {
+            var saveMemoArray = ud.array(forKey: "ESArray") as! [String]
+            
+            if inputText != nil{
+                saveMemoArray.append(inputText!)
             } else {
-                let alertController = UIAlertController(title: "保存完了", message: "保存が完了しました。ES一覧に戻ります。", preferredStyle: .alert)
-                
-                let action = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-                    self.navigationController?.popViewController(animated: true)
-                })
-                alertController.addAction(action)
-                self.present(alertController, animated: true, completion: nil)
+                print("何も入力されていません")
             }
-        } )
+            ud.set(saveMemoArray, forKey: "ESArray")
+        } else {
+            var newMemoArray = [String]()
+            
+            if inputText != nil{
+                newMemoArray.append(inputText!)
+            } else {
+                print("何も入力されていません")
+            }
+            ud.set(newMemoArray,forKey: "ESArray")
     }
+        ud.synchronize()
+        self.navigationController?.popViewController(animated: true)
+   }
+
     
 
 }

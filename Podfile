@@ -7,7 +7,6 @@ target 'ESChecker' do
 
   # Pods for ESChecker
 
-  pod 'NCMB', :git => 'https://github.com/NIFTYCloud-mbaas/ncmb_ios.git'
   
   pod "KRProgressHUD"
 

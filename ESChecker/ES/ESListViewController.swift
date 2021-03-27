@@ -6,12 +6,11 @@
 //
 
 import UIKit
-import NCMB
 
 
 class ESListViewController: UIViewController, UITableViewDataSource, UITableViewDelegate{
     
-    var ESArray = [NCMBObject]()
+    var ESArray = [String]()
     
     @IBOutlet var ESTableView: UITableView!
     
@@ -27,7 +26,7 @@ class ESListViewController: UIViewController, UITableViewDataSource, UITableView
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        loadData()
+        loadMemo()
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -36,8 +35,15 @@ class ESListViewController: UIViewController, UITableViewDataSource, UITableView
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell")!
-        cell.textLabel?.text = ESArray[indexPath.row].object(forKey: "es") as? String
+        cell.textLabel?.text = ESArray[indexPath.row]
         return cell
+    }
+    func loadMemo() {
+        let ud = UserDefaults.standard
+        if ud.array(forKey: "ESArray") != nil {
+            ESArray = ud.array(forKey: "ESArray") as! [String]
+            ESTableView.reloadData()
+        }
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
@@ -51,23 +57,11 @@ class ESListViewController: UIViewController, UITableViewDataSource, UITableView
         //次の画面の取得（Detail）
         if segue.identifier == "toDetail"{
             let detailViewController = segue.destination as! DetailViewController
-            
             let selectedIndex = ESTableView.indexPathForSelectedRow!
-
             detailViewController.selectedES = ESArray[selectedIndex.row]
+            detailViewController.selectedrow = selectedIndex.row
         }
     
     }
     
-    func loadData() {
-        let query = NCMBQuery(className: "ES")
-        query?.findObjectsInBackground({ (result, error) in
-            if error != nil {
-                print(error!)
-            } else {
-                self.ESArray = result as! [NCMBObject]
-                self.ESTableView.reloadData()
-            }
-        })
-    }
 }

@@ -6,43 +6,47 @@
 //
 
 import UIKit
-import NCMB
 import KRProgressHUD
 
 class DetailViewController: UIViewController {
     
-    var selectedES: NCMBObject!
+    var selectedrow: Int!
+    var selectedES: String!
 
     @IBOutlet var ESTextView: UITextView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        ESTextView.text = selectedES.object(forKey: "es") as? String
+        ESTextView.text = selectedES
     }
-    
-
-    @IBAction func update() {
-        selectedES.setObject(ESTextView.text, forKey: "es")
-        selectedES.saveInBackground { (error) in
-            if error != nil {
-                KRProgressHUD.showError(withMessage: error?.localizedDescription)
-            } else {
-                //成功
-                self.navigationController?.popViewController(animated: true)
-            }
-        }
-    }
-    
-    @IBAction func delete() {
-        selectedES.deleteInBackground { (error) in
-           if error != nil {
-                KRProgressHUD.showError(withMessage: error?.localizedDescription)
-            } else {
-                
+    @IBAction func deleteMemo() {
+        let ud = UserDefaults.standard
+        if ud.array(forKey: "ESArray") != nil {
+            var saveMemoArray = ud.array(forKey: "ESArray") as! [String]
+            saveMemoArray.remove(at: selectedrow)
+            ud.set(saveMemoArray, forKey: "ESArray")
+            ud.synchronize()
             self.navigationController?.popViewController(animated: true)
-                
-            }
         }
     }
+    
+    @IBAction func save() {
+        let inputText = ESTextView.text
+        let ud = UserDefaults.standard
+        if ud.array(forKey: "ESArray") != nil {
+            var saveMemoArray = ud.array(forKey: "ESArray") as! [String]
+            
+            if inputText != nil{
+                saveMemoArray.append(inputText!)
+            } else {
+                print("何も入力されていません")
+            }
+            ud.set(saveMemoArray, forKey: "ESArray")
+        } 
+        ud.synchronize()
+        self.navigationController?.popViewController(animated: true)
+   }
+
+    
 }
