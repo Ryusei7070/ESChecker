@@ -42,10 +42,12 @@ class DetailViewController: UIViewController {
             } else {
                 print("何も入力されていません")
             }
-            ud.set(saveMemoArray, forKey: "ESArray")
-        } 
-        ud.synchronize()
-        self.navigationController?.popViewController(animated: true)
+            saveMemoArray.remove(at: selectedrow)
+            ud.set(saveMemoArray,forKey: "ESArray")
+            ud.synchronize()
+            self.navigationController?.popViewController(animated: true)
+        }
+ 
    }
 
     
