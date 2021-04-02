@@ -165,7 +165,7 @@
             </objects>
             <point key="canvasLocation" x="-810" y="382"/>
         </scene>
-        <!--チェック-->
+        <!--面接前チェックリスト-->
         <scene sceneID="IK5-yN-FFc">
             <objects>
                 <tableViewController id="gj8-qP-vKS" customClass="CheckListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -188,7 +188,7 @@
                             <outlet property="delegate" destination="gj8-qP-vKS" id="IyF-i6-Jtt"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" title="チェック" id="EK5-XI-p5M">
+                    <navigationItem key="navigationItem" title="面接前チェックリスト" id="EK5-XI-p5M">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="fxj-xj-zbD">
                             <connections>
                                 <action selector="addButtonPressed:" destination="gj8-qP-vKS" id="n7B-0F-yd8"/>
@@ -220,11 +220,11 @@
             </objects>
             <point key="canvasLocation" x="411" y="-450"/>
         </scene>
-        <!--Item-->
+        <!--事前チェック-->
         <scene sceneID="J9b-Fe-7vq">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="7Vn-MM-s6b" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="person.crop.circle.badge.checkmark.fill" catalog="system" id="Dtp-3I-Hb8"/>
+                    <tabBarItem key="tabBarItem" title="事前チェック" image="person.crop.circle.badge.checkmark.fill" catalog="system" id="Dtp-3I-Hb8"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="3Tk-fw-264">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
@@ -240,7 +240,7 @@
             </objects>
             <point key="canvasLocation" x="411" y="382"/>
         </scene>
-        <!--TODO-->
+        <!--面接後のTODOリスト-->
         <scene sceneID="XAX-MH-Dla">
             <objects>
                 <viewController id="8Cc-ua-xdo" customClass="TODOListViewController" customModule="ESChecker" customModuleProvider="target" sceneMemberID="viewController">
@@ -272,7 +272,7 @@
                             <constraint firstAttribute="bottom" secondItem="Baz-aG-fBe" secondAttribute="bottom" id="jZW-Ua-Yu0"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="TODO" id="gCZ-nl-gKd">
+                    <navigationItem key="navigationItem" title="面接後のTODOリスト" id="gCZ-nl-gKd">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="dhP-Vc-ZQQ">
                             <connections>
                                 <action selector="addBtnAction:" destination="8Cc-ua-xdo" id="4cD-iC-Jb4"/>
@@ -287,11 +287,11 @@
             </objects>
             <point key="canvasLocation" x="1310.7476635514017" y="1217.4946004319656"/>
         </scene>
-        <!--Item-->
+        <!--TODO-->
         <scene sceneID="BRy-TS-j7T">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="hso-Ct-9Lq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="Zbi-UI-qLk"/>
+                    <tabBarItem key="tabBarItem" title="TODO" image="rectangle.and.pencil.and.ellipsis" catalog="system" id="Zbi-UI-qLk"/>
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="w0j-7J-gGb">
                         <rect key="frame" x="0.0" y="44" width="428" height="44"/>
