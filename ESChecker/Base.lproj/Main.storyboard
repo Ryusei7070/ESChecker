@@ -48,7 +48,7 @@
                         </barButtonItem>
                     </navigationItem>
                     <connections>
-                        <outlet property="ESTableView" destination="Zt5-fS-JEX" id="hQV-Uk-H5d"/>
+                        <outlet property="ESTableView" destination="Zt5-fS-JEX" id="Dbm-Jq-6vv"/>
                         <segue destination="uHf-Jz-ML3" kind="show" identifier="toDetail" id="7lF-j5-5dL"/>
                     </connections>
                 </viewController>
@@ -101,7 +101,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="rSu-1c-Qpn" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2832" y="-450"/>
+            <point key="canvasLocation" x="2831.7757009345792" y="-450.32397408207345"/>
         </scene>
         <!--入力画面-->
         <scene sceneID="bav-Zv-Tmt">
